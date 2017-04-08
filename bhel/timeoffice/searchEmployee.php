@@ -1,0 +1,39 @@
+<?php
+session_start();
+	if(isset($_SESSION['login_type']))
+	{
+		$login_type=$_SESSION['login_type'];
+		if(strcmp($login_type,"timeoffice")==0)
+		{
+			if(isset($_GET['empid']))
+			{
+				$root=$_SERVER['DOCUMENT_ROOT'];
+				$id=$_GET['empid'];
+				include_once("$root/bhel/db/login.php");
+				$query="SELECT * FROM emp INNER JOIN leave_count where emp.id='$id' and emp.id=leave_count.E_ID";
+				$result=mysqli_query($conn,$query);
+				$json;
+				if($result)
+				{
+					if(mysqli_num_rows($result)==1)
+					{
+						$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+						$row['status']=1;
+						$json=json_encode($row);
+					}
+					else
+					{
+						$row=Array();
+						$row['status']=0;
+						$json=json_encode($row);
+					}
+					print $json;
+				}
+				else{
+					echo $query;
+				}
+			}
+		}
+	}
+	exit();
+?>

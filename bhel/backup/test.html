@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	 $("#a_show").click(function(){
+		$("#admin_login").slideToggle("slow");
+		$("#s_show").hide();
+		$("#t_show").hide();
+	});
+	$("#s_show").click(function(){
+		$("#supervisor_login").slideToggle("slow");
+		$("#a_show").hide();
+		$("#t_show").hide();
+	});
+	$("#t_show").click(function(){
+		$("#timeoffice_login").slideToggle("slow");
+		$("#a_show").hide();
+		$("#s_show").hide();
+	});
+	$("#a_back").click(function(){
+		$("#admin_login").slideToggle("slow");
+		$("#a_show").show();
+		$("#s_show").show();
+		$("#t_show").show();
+	});
+	$("#s_back").click(function(){
+		$("#supervisor_login").slideToggle("slow");
+		$("#a_show").show();
+		$("#s_show").show();
+		$("#t_show").show();
+	});
+	$("#t_back").click(function(){
+		$("#timeoffice_login").slideToggle("slow");
+		$("#a_show").show();
+		$("#s_show").show();
+		$("#t_show").show();
+	});
+	
+});
+
+</script>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta charset="ISO-8859-1">
+<title>BHEL</title>
+<style>
+	h3{
+			text-align:center;
+		
+			font-style:italic;
+			font-size:30px;
+		}
+		h1{
+			text-align:center;
+			font-size:60px;
+			font-style:italic;
+		}
+	form.f1{
+		align:center;
+	}
+	body{
+		background-image:url("images/bg2.jpg");
+	}
+	
+
+</style>
+</head>
+<body>
+<h1><img src="images/2.jpg" height="100" width="100">
+Bharat Heavy Electronic Limited
+
+</h1>
+<marquee scrollamount="20" onmouseover="this.stop()" onmouseout="this.start()">
+<img src="images/1.jpg" width="350" height="100">
+<img src="images/4.jpg" width="350" height="100">
+<img src="images/3.jpg" width="350" height="100">
+<img src="images/download.jpg" width="350" height="100">
+</marquee>
+<h3><b>WELCOME</b></h3>
+<br><br><br>
+<center>
+<form id="f1" action="" method="POST">
+<input type="button" value="Admin login" name="a" id="a_show" class="button">
+<input type="button"value="Supervisor Login" name="s" id="s_show" class="button">
+<input type="button" value="Time Office Login" name="t" id="t_show" class="button">
+</form>
+<br><br><br>
+<div id="admin_login" style="display:none">
+<form  action="" method="POST">
+<input type="text" placeholder="Enter User Name" id="admin_uname" class="text"><br><br>
+<input type="password" placeholder="Enter Password " id="admin_pwd" class="text"><br>
+<br><br><br>
+<input type="button" value="Login" name="login" id="a_submit" class="button">
+<input type="button" value="Return to Previous" name="Return" id="a_back" class="button">
+</form>
+</div>
+<div id="supervisor_login" style="display:none">
+<form  action="" method="POST">
+<input type="text" placeholder="Enter User Name" id="supervisor_uname" class="text"><br><br>
+<input type="password" placeholder="Enter Password " id="supervisor_pwd" class="text"><br>
+<br><br><br>
+<input type="button" value="Login" name="login" id="s_submit" class="button">
+<input type="button" value="Return to Previous" name="Return" id="s_back" class="button">
+</form>
+</div>
+<div id="timeoffice_login" style="display:none">
+<form  action="" method="POST">
+<input type="text" placeholder="Enter User Name" id="timeoffice_uname" class="text"><br><br>
+<input type="password" placeholder="Enter Password " id="timeoffice_pwd" class="text"><br>
+<br><br><br>
+<input type="button" value="Login" name="login" id="t_submit" class="button">
+<input type="button" value="Return to Previous" name="Return" id="t_back" class="button">
+</form>
+</div>
+
+
+</center>
+</body>
+</html> 

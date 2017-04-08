@@ -1,0 +1,72 @@
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+      
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	 $("#p_show").click(function(){
+		$("#ch_pwd").slideToggle("slow");
+		
+	});
+   });
+</script>
+
+       <style>
+        ul#menu {
+    padding: 0;
+         
+}
+
+ul#menu li {
+    display: inline-block;
+    float: right;
+}
+ul#menu li a {
+    background-color:008CBA ;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px 4px 0 0;
+}
+
+ul#menu li a:hover {
+    background-color: darkblue;
+}
+l{
+   color: white; 
+   font-style:italic;
+   font-size:20px;
+}
+        </style>
+
+    </head>
+    <body>
+        <div style="background-color:#008CBA; color:white; padding:28px;">  
+            <l>supervisor , 111</l>
+        <ul id="menu">
+            <li><a id="l_show">Logout</a></li>
+            
+            <li><a id="p_show">Change Password</a></li>
+            <li><a id="e_show">Employee Details</a></li>
+            
+        </ul>
+         </div>
+        <div id="ch_pwd" style="display:none">
+     <center>
+        <form id="pwd" action="">
+            <br><br><br>
+            <input type="text" placeholder="Enter current password" id="cu_pwd" class="text"><br><br>
+            <input type="text" placeholder="Enter new password" id="n_pwd" class="text">
+            <br><br><br>
+        <input type="submit" value="Submit" class="button">
+       </form>
+     </center>
+ </div>
+    </body>
+</html>

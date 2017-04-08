@@ -1,0 +1,24 @@
+.Texecutive{
+	font-size:22px;
+	
+}
+.Tsupervisor{
+	font-size:20px;
+}
+.Temployee{
+	font-size:18px;
+}
+.Texecutive:hover,.Tsupervisor:hover,.Temployee:hover{
+	cursor:pointer;
+	color:#5566dd;
+	text-decoration:underline;
+}
+.expandExecutive{
+	margin-right: 5px;
+    font-size: 12px;
+    border-style: solid;
+    border-width: 1px;
+}
+ul {
+  list-style-type: none;
+}
